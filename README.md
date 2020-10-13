@@ -1,3 +1,1 @@
-React Firebase Firestore Tutorial
-
-Example for this [video](https://youtu.be/yyo_TcZCrS4)
+Firebase com ReactJS para a aula de Dispositivos Móveis
