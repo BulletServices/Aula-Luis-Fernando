@@ -1,38 +1,94 @@
-.App {
+.product {
+  display: inline-block;
+  background-color: whitesmoke;
+  margin: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 3px #ccc;
+  width: 150px;
+  height: 100px;
+  padding: 10px;
+}
+
+.home{
   text-align: center;
+  border: 2px solid darkgreen;
+  padding: 10px 0;
+  margin-top: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* Global Styles */
+:root {
+  --nav-primary-color: darkgreen;
+  --nav-text-color:white;
+  --nav-a-hov-color:darkred;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Utilities */
+.container {
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.bg-primary{
+  background: var(--nav-primary-color);
+  color: var(--nav-text-color);
+}
+/* Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 20px;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar ul {
+  display: flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar a {
+  color: var(--nav-text-color);
+  padding: 5px;
+  margin: 0 5px;
+}
+.navbar a:hover {
+  color: var(--nav-a-hov-color);
+}
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+.grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+/* Navbar */
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+.navbar ul {
+    text-align: center;
+    justify-content: center;
   }
 }
