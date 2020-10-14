@@ -5,35 +5,35 @@ import firebase from "./firebase";
 import { SpellInput } from "./SpellInput";
 
 function App() {
-  const [spells, setSpells] = React.useState([]);
-  const [newSpellName, setNewSpellName] = React.useState();
+  const [textos, setTextos] = React.useState([]);
+  const [newTextoName, setNewTextoName] = React.useState();
 
   React.useEffect(() => {
     const fetchData = async () => {
       const db = firebase.firestore();
-      const data = await db.collection("spells").get();
-      setSpells(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      const data = await db.collection("textos").get();
+      setTextos(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
     };
     fetchData();
   }, []);
 
   const onCreate = () => {
     const db = firebase.firestore();
-    db.collection("spells").add({ name: newSpellName });
+    db.collection("textos").add({ name: newTextoName });
   };
 
   return (
     <div class="primeira-div">
     <ol>
       <input class="primeiro-input"
-        value={newSpellName}
-        onChange={e => setNewSpellName(e.target.value)}
+        value={newTextoName}
+        onChange={e => setNewTextoName(e.target.value)}
       />
       <button class="botao_enviar"
        onClick={onCreate}>Enviar Texto</button>
-      {spells.map(spell => (
-        <li key={spell.name}>
-          <SpellInput spell={spell} />
+      {textos.map(texto => (
+        <li key={texto.name}>
+          <SpellInput texto={texto} />
         </li>
       ))}
     </ol>

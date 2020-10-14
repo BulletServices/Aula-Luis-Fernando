@@ -1,17 +1,17 @@
 import React from "react";
 import firebase from './firebase'
 
-export const SpellInput = ({ spell }) => {
-  const [name, setName] = React.useState(spell.name);
+export const SpellInput = ({ texto }) => {
+  const [name, setName] = React.useState(texto.name);
 
   const onUpdate = () => {
     const db = firebase.firestore()
-    db.collection('spells').doc(spell.id).set({...spell, name})
+    db.collection('textos').doc(texto.id).set({...texto, name})
   }
 
   const onDelete = () => {
     const db = firebase.firestore()
-    db.collection('spells').doc(spell.id).delete()
+    db.collection('textos').doc(texto.id).delete()
   }
 
   return (
