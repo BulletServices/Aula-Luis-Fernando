@@ -2,7 +2,7 @@ import React from "react";
 import "./bootstrap.css"
 import "./App.css";
 import firebase from "./firebase";
-import { SpellInput } from "./SpellInput";
+import { TextosSalvar } from "./TextosSalvar";
 
 function App() {
   const [textos, setTextos] = React.useState([]);
@@ -33,7 +33,7 @@ function App() {
        onClick={onCreate}>Enviar Texto</button>
       {textos.map(texto => (
         <li key={texto.name}>
-          <SpellInput texto={texto} />
+          <TextosSalvar texto={texto} />
         </li>
       ))}
     </ol>
