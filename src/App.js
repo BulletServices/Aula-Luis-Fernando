@@ -1,4 +1,5 @@
 import React from "react";
+import "./bootstrap.css"
 import "./App.css";
 import firebase from "./firebase";
 import { SpellInput } from "./SpellInput";
@@ -22,18 +23,21 @@ function App() {
   };
 
   return (
+    <div class="primeira-div">
     <ul>
-      <input
+      <input class="primeiro-input"
         value={newSpellName}
         onChange={e => setNewSpellName(e.target.value)}
       />
-      <button onClick={onCreate}>Creat</button>
+      <button class="botao_enviar"
+       onClick={onCreate}>Enviar Texto</button>
       {spells.map(spell => (
         <li key={spell.name}>
           <SpellInput spell={spell} />
         </li>
       ))}
     </ul>
+    </div>
   );
 }
 

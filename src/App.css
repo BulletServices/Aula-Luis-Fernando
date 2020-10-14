@@ -20,3 +20,16 @@
 .App-link {
   color: #09d3ac;
 }
+
+.primeira-div{
+  padding-top: 50px;
+}
+
+.primeiro-input{
+  margin-bottom: 20px;
+}
+
+.botao_enviar{
+  background-color: gold;
+  -webkit-text-stroke: thin;
+}
