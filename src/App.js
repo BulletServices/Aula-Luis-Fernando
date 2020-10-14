@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div class="primeira-div">
-    <ul>
+    <ol>
       <input class="primeiro-input"
         value={newSpellName}
         onChange={e => setNewSpellName(e.target.value)}
@@ -36,7 +36,7 @@ function App() {
           <SpellInput spell={spell} />
         </li>
       ))}
-    </ul>
+    </ol>
     </div>
   );
 }
