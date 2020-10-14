@@ -33,3 +33,20 @@
   background-color: gold;
   -webkit-text-stroke: thin;
 }
+
+button{
+  margin-left: 10px;
+  -webkit-text-stroke: thin;
+}
+
+input{
+  margin-bottom: 10px;
+}
+
+.botao_atualizar{
+  background-color: darkseagreen;
+}
+
+.botao_apagar{
+  background-color: tomato;
+}

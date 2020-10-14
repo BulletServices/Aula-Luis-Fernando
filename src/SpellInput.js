@@ -22,8 +22,8 @@ export const SpellInput = ({ spell }) => {
           setName(e.target.value);
         }}
       />
-      <button onClick={onUpdate}>Atualizar</button>
-      <button onClick={onDelete}>Apagar</button>
+      <button class="botao_atualizar" onClick={onUpdate}>Atualizar</button>
+      <button class="botao_apagar" onClick={onDelete}>Apagar</button>
     </>
   );
 };
